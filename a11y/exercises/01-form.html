@@ -8,18 +8,27 @@
   <body>
     <h1>Form Example</h1>
     <form action="">
-      <span>Name</span>
-      <input type="text" />
+      <label>
+        Name
+        <input type="text" />
+      </label>
       <br /><br />
       <label>
         Email
         <input type="text" />
       </label>
       <br /><br />
-      <span>Favorite Character</span>
-      <div><input type="radio" id="spongebob" />Spongebob</div>
-      <div><input type="radio" id="patrick" />Patrick</div>
-      <div><input type="radio" id="sandy" />Sandy</div>
+      <fieldset>
+        <legend>Favorite Character</legend>
+        <input type="radio" id="spongebob" />
+        <label for="spongebob">Spongebob</label>
+        <br>
+        <input type="radio" id="patrick" />
+        <label for="patrick">Patrick</label>
+        <br>
+        <div><input type="radio" id="sandy" />
+        <label for="sandy">Sandy</label>
+      </fieldset>
       <br />
       <button>Submit</button>
     </form>
