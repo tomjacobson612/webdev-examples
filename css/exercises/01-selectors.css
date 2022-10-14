@@ -9,13 +9,38 @@
 }
 
 /* Use attribute selectors for the first part of the exercise */
-
-li[class] {
-  color: var(--red);
+li[id="cat"]{
+  color: var(--teal)
 }
 
+li[class='parrot'] {
+  color: var(--green);
+}
+
+li[class='donkey'] {
+  color: var(--royalblue);
+}
+
+li[class*='do'] {
+  color: var(--royalblue);
+}
+
+li[class$='g'] {
+  color: var(--violet);
+}
 /* Use descendant, child, and sibling selectors for the second part */
 
+/*This code means any <section> that has <li> will get this style*/
 section li {
   color: var(--green);
+}
+
+/*~ means all li siblings after class first*/
+.first ~li{
+  color: var(--violet)
+}
+
+/*+ means immediate sibling (coffee is still pink because of above rule!)*/
+.second +li{
+  color: var(--royalblue)
 }

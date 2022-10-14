@@ -1,3 +1,76 @@
+nav{
+  background-color: var(--black);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+nav ul{
+  /*removes bullet pts*/
+  list-style-type: none;
+  /*removes padding from bullet pts*/
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li{
+  /*sets nav bar elements next to each other*/
+  display: inline-block;
+}
+
+/* adds a grey background to when you hover a nav bar li 
+nav ul li:hover{
+  background-color: var(--gray1);
+}*/
+
+nav ul li a{
+  display: block;
+  /*remove underline from links*/
+  text-decoration: none;
+  color: var(--white);
+  /*margin: 1em;*/
+  /*increases size of clickable area!*/
+  padding: 1em;
+}
+
+/*sets the hover on the link element*/
+nav ul li a:hover{
+  background-color: var(--gray1);
+}
+/* when we made our nav bar fixed it broke normal flow, had to move everything in main down to compensate */
+.main{
+  margin-top: 100px;
+  /*pads main, makes it look more inline*/
+  padding: 0 0.5em;
+}
+body{
+  background: var(--purple);
+  color: var(--white);
+}
+
+@media (max-width: 414px){
+  nav ul li{
+    width: 100%
+  }
+
+  .main{
+    margin-top: 220px;
+  }
+}
+
+/*upper bound for mobile is 414, so we are 1 above that */
+@media (min-width: 415px){
+  body {
+    background: var(--orange);
+    color: var(--black);
+  }
+
+  .main{
+    margin-top: 100px;
+  }
+}
+
 @media (min-width: 1024px) {
   body {
     background: var(--green);

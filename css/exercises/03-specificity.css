@@ -1,25 +1,37 @@
 /* Specificity Exercise */
 
+/*X - Y - Z
+X = number of id selectors
+Y = number of class selectors, psuedoclass selectors, attribute selectors
+Z = element selectors and psuedoelement selector
+IN VS CODE HOVERING GIVES YOU THE CALC*/
+
+/*1 class, 2 elements*/
 nav .list-item > a {
   color: var(--purple);
 }
 
+/*1id, 1 psuedo element*/
 #main::first-letter {
   color: var(--purple);
 }
 
+/*1 element, 1 attribute*/
 input[type] {
   color: var(--purple);
 }
 
+/*1 class, 1 element, 1 psuedo element*/
 section .main::first-line {
   color: var(--purple);
 }
 
-nav ul.menu li#first a:not([class='visited']) {
+/*1 id (#first), 2 classes, 4 elements (nav, ul, li, a)*/
+nav ul.menu li#first a:not([class="visited"]) {
   color: var(--purple);
 }
 
+/*10 elements*/
 div ol li ul li ol li ul li a {
   color: var(--purple);
 }
